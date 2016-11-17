@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2016-11-17T12:23:09 -->
+<!-- 2016-11-17T13:14:09 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JsonCountryReport" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="bbe115b5-a5a0-4b39-9b73-7092dc59ab6d">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON Data Adapter "/>
 	<property name="net.sf.jasperreports.json.source" value="/home/vasi/git/valter/reports/Demo/data/northwind.json"/>
@@ -8,7 +8,7 @@
 	<style name="Sans_Bold" fontName="DejaVu Sans" fontSize="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 	<style name="Sans_Italic" fontName="DejaVu Sans" fontSize="12" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
 	<queryString language="json">
-		<![CDATA[Northwind.Orders]]>
+		<![CDATA[Northwind.Orders(ShipCountry == Germany)]]>
 	</queryString>
 	<field name="ShipCountry" class="java.lang.String">
 		<fieldDescription><![CDATA[ShipCountry]]></fieldDescription>
@@ -59,7 +59,7 @@
 				<subreportParameter name="JSON_LOCALE">
 					<subreportParameterExpression><![CDATA[$P{JSON_LOCALE}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="Country">
+				<subreportParameter name="ShipCountry">
 					<subreportParameterExpression><![CDATA[$F{ShipCountry}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="net.sf.jasperreports.json.source">
