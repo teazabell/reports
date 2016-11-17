@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-11-17T18:32:54 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="master" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f43b8699-60c4-47de-996a-ca577f99855f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON Data Adapter "/>
+	<property name="net.sf.jasperreports.json.source" value="/home/vasi/git/valter/reports/Demo/data/northwind.json"/>
+	<queryString language="json">
+		<![CDATA[Northwind]]>
+	</queryString>
+	<field name="Orders" class="java.lang.String">
+		<fieldDescription><![CDATA[Orders]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="212" splitType="Stretch">
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" x="5" y="25" width="507" height="20" isRemoveLineWhenBlank="true" backcolor="#FFCC99" uuid="d9deb236-65fa-44ae-a82f-7f1fe049df25"/>
+				<subreportParameter name="net.sf.jasperreports.json.date.pattern">
+					<subreportParameterExpression><![CDATA[$P{net.sf.jasperreports.json.date.pattern}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="net.sf.jasperreports.json.number.pattern">
+					<subreportParameterExpression><![CDATA[$P{net.sf.jasperreports.json.number.pattern}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="JSON_LOCALE">
+					<subreportParameterExpression><![CDATA[$P{JSON_LOCALE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Orders")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["demo/samples/jsondatasource/reports/orders/group.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
