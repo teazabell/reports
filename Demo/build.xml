@@ -2,7 +2,7 @@
 
 	<description>Shows how the built-in XPath-based data source could be used for reporting out of XML data.</description>
 
-	<import file="../build-sample-classpath.xml"/>
+	<import file="build-sample-classpath.xml"/>
 
 	<property name="sample.dir" value="jsondatasource"/>
 	<property name="sample.base.name" value="JsonDataSource" />
