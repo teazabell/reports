@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2016-11-17T18:32:54 -->
+<!-- 2016-11-17T19:25:24 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="master" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f43b8699-60c4-47de-996a-ca577f99855f">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON Data Adapter "/>
 	<property name="net.sf.jasperreports.json.source" value="/home/vasi/git/valter/reports/Demo/data/northwind.json"/>
