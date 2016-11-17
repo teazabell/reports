@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2016-11-17T17:44:09 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="country_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2cc77ccf-a96e-4fde-80e4-617aa37a19b8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON Data Adapter "/>
+	<queryString language="json">
+		<![CDATA[Northwind.Orders]]>
+	</queryString>
+	<field name="ShipCountry" class="java.lang.String">
+		<fieldDescription><![CDATA[ShipCountry]]></fieldDescription>
+	</field>
+	<sortField name="ShipCountry"/>
+	<group name="ShipCountry">
+		<groupExpression><![CDATA[$F{ShipCountry}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<subreport>
+					<reportElement isPrintRepeatedValues="false" x="5" y="25" width="507" height="20" isRemoveLineWhenBlank="true" backcolor="#FFCC99" uuid="122eb7b3-e2bf-49eb-859d-4c29bfd6882e"/>
+					<subreportParameter name="net.sf.jasperreports.json.date.pattern">
+						<subreportParameterExpression><![CDATA[$P{net.sf.jasperreports.json.date.pattern}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="net.sf.jasperreports.json.number.pattern">
+						<subreportParameterExpression><![CDATA[$P{net.sf.jasperreports.json.number.pattern}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="JSON_LOCALE">
+						<subreportParameterExpression><![CDATA[$P{JSON_LOCALE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ShipCountry">
+						<subreportParameterExpression><![CDATA[$F{ShipCountry}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="net.sf.jasperreports.json.source">
+						<subreportParameterExpression><![CDATA["/home/vasi/git/valter/reports/Demo/data/northwind.json"]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression><![CDATA["country_order_list.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="1" width="100" height="30" uuid="f85a3386-b295-42ad-b59c-2e409928e5d9"/>
+				<text><![CDATA[ShipCountry]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="3" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
