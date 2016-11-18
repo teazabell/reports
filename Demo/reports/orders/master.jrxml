@@ -1,51 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2016-11-18T14:01:48 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="country_orders_report_new" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="bbe115b5-a5a0-4b39-9b73-7092dc59ab6d">
+<!-- 2016-11-18T17:10:41 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="master" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="bbe115b5-a5a0-4b39-9b73-7092dc59ab6d">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Demo JSON Data Adapter "/>
+	<property name="net.sf.jasperreports.json.source" value="/home/vasi/git/valter/reports/Demo/data/northwind.json"/>
 	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 	<style name="Sans_Normal_8" style="Sans_Normal" fontSize="8"/>
 	<style name="Sans_Bold" fontName="DejaVu Sans" fontSize="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 	<style name="Sans_Bold_8" style="Sans_Bold" fontSize="8"/>
 	<queryString language="json">
-		<![CDATA[Northwind.Orders]]>
+		<![CDATA[Northwind]]>
 	</queryString>
-	<field name="ShipCountry" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="ShipCountry"/>
+	<field name="Customers" class="java.lang.String">
+		<fieldDescription><![CDATA[Customers]]></fieldDescription>
 	</field>
-	<field name="Id" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="OrderID"/>
+	<field name="Orders" class="java.lang.String">
+		<fieldDescription><![CDATA[Orders]]></fieldDescription>
 	</field>
-	<field name="OrderDate" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="OrderDate"/>
-	</field>
-	<field name="ShipCity" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="ShipCity"/>
-	</field>
-	<field name="Currency" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="Currency"/>
-	</field>
-	<field name="Freight" class="java.lang.Float">
-		<property name="net.sf.jasperreports.json.field.expression" value="Freight"/>
-	</field>
-	<sortField name="Currency"/>
-	<group name="CurrencyGroup" isReprintHeaderOnEachPage="true">
-		<groupExpression><![CDATA[$F{Currency}]]></groupExpression>
-		<groupHeader>
-			<band height="21">
-				<textField>
-					<reportElement style="Sans_Bold" x="5" y="5" width="100" height="15" isPrintWhenDetailOverflows="true" uuid="0aaeed6e-7ba1-4ab9-be59-d6ca702995fc"/>
-					<textFieldExpression><![CDATA[$F{Currency}]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement x="0" y="20" width="515" height="1" isPrintWhenDetailOverflows="true" uuid="6d76c22c-329f-4e77-a886-8580d3cb6bc1"/>
-				</line>
-			</band>
-		</groupHeader>
-		<groupFooter>
-			<band height="175"/>
-		</groupFooter>
-	</group>
 	<title>
 		<band height="50">
 			<line>
@@ -60,37 +31,18 @@
 			</staticText>
 		</band>
 	</title>
-	<pageHeader>
-		<band height="21">
-			<staticText>
-				<reportElement style="Sans_Bold" mode="Opaque" x="0" y="5" width="515" height="15" forecolor="#FFFFFF" backcolor="#333333" uuid="da0f1cad-f552-424b-bf19-b41cabbfa4ac"/>
-				<text><![CDATA[Currency]]></text>
-			</staticText>
-		</band>
-	</pageHeader>
 	<detail>
-		<band height="200">
-			<subreport>
-				<reportElement x="0" y="0" width="515" height="200" uuid="68fd77e4-5c8a-40a6-87db-e5357053256f"/>
-				<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></dataSourceExpression>
-				<subreportExpression><![CDATA["reports/orders/by/currency/countries.jasper"]]></subreportExpression>
-			</subreport>
+		<band height="231">
+			<frame>
+				<reportElement x="0" y="0" width="515" height="200" uuid="7f86dec5-f469-4b18-ac11-a70408536077"/>
+				<subreport isUsingCache="true">
+					<reportElement x="0" y="0" width="515" height="100" uuid="ebd4e147-b294-4367-a072-dc1954980232"/>
+					<subreportParameter name="REPORT_DATA_SOURCE">
+						<subreportParameterExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Orders")]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression><![CDATA["reports/orders/subreports/currency.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
 		</band>
 	</detail>
-	<pageFooter>
-		<band height="40">
-			<line>
-				<reportElement x="0" y="10" width="515" height="1" uuid="1371178a-a590-4616-affe-a4e1a24bcc84"/>
-			</line>
-			<textField>
-				<reportElement x="200" y="20" width="80" height="15" uuid="3eb302d8-0855-4f82-a666-3c9628dce372"/>
-				<textElement textAlignment="Right"/>
-				<textFieldExpression><![CDATA["Page " + String.valueOf($V{PAGE_NUMBER}) + " of"]]></textFieldExpression>
-			</textField>
-			<textField evaluationTime="Report">
-				<reportElement x="280" y="20" width="75" height="15" uuid="86f46fca-dbcb-4a60-b2f7-f8da6a4224f7"/>
-				<textFieldExpression><![CDATA[" " + String.valueOf($V{PAGE_NUMBER})]]></textFieldExpression>
-			</textField>
-		</band>
-	</pageFooter>
 </jasperReport>
