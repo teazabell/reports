@@ -62,7 +62,8 @@
       "ShipVia": 3,
       "CustomerID": "ALFKI",
       "ShipAddress": "59 rue de l'Abbaye",
-      "ShipName": "Vins et alcools Chevalier"
+      "ShipName": "Vins et alcools Chevalier",
+      "Currency": "EUR"
     },
     {
       "ShipPostalCode": "05454-876",
@@ -78,7 +79,8 @@
       "ShipVia": 2,
       "CustomerID": "ANTON",
       "ShipAddress": "Rua do Paço, 67",
-      "ShipName": "Hanari Carnes"
+      "ShipName": "Hanari Carnes",
+      "Currency": "EUR"
     },
     {
       "ShipPostalCode": 87110,
@@ -93,7 +95,8 @@
       "ShipVia": 2,
       "CustomerID": "RATTC",
       "ShipAddress": "2817 Milton Dr.",
-      "ShipName": "Rattlesnake Canyon Grocery"
+      "ShipName": "Rattlesnake Canyon Grocery",
+      "Currency": "EUR"
     },
     {
       "ShipPostalCode": 44087,
@@ -108,7 +111,8 @@
       "ShipVia": 1,
       "CustomerID": "ANATR",
       "ShipAddress": "Luisenstr. 48",
-      "ShipName": "Toms Spezialitäten"
+      "ShipName": "Toms Spezialitäten",
+      "Currency": "EUR"
     },
     {
       "ShipPostalCode": 44087,
@@ -123,7 +127,8 @@
       "ShipVia": 1,
       "CustomerID": "RATTC",
       "ShipAddress": "Luisenstr. 48",
-      "ShipName": "Martinez Gonzalez"
+      "ShipName": "Martinez Gonzalez",
+      "Currency": "EUR"
     }
   ]
 }}
