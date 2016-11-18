@@ -80,7 +80,7 @@
       "CustomerID": "ANTON",
       "ShipAddress": "Rua do Paço, 67",
       "ShipName": "Hanari Carnes",
-      "Currency": "EUR"
+      "Currency": "BR"
     },
     {
       "ShipPostalCode": 87110,
@@ -96,7 +96,7 @@
       "CustomerID": "RATTC",
       "ShipAddress": "2817 Milton Dr.",
       "ShipName": "Rattlesnake Canyon Grocery",
-      "Currency": "EUR"
+      "Currency": "US"
     },
     {
       "ShipPostalCode": 44087,
@@ -112,7 +112,7 @@
       "CustomerID": "ANATR",
       "ShipAddress": "Luisenstr. 48",
       "ShipName": "Toms Spezialitäten",
-      "Currency": "EUR"
+      "Currency": "US"
     },
     {
       "ShipPostalCode": 44087,

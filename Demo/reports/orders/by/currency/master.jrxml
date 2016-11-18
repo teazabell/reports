@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2016-11-18T11:05:24 -->
+<!-- 2016-11-18T11:57:00 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="country_orders_report_new" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="bbe115b5-a5a0-4b39-9b73-7092dc59ab6d">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Demo JSON Data Adapter "/>
 	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
@@ -24,9 +24,6 @@
 	</field>
 	<field name="Freight" class="java.lang.Float">
 		<property name="net.sf.jasperreports.json.field.expression" value="Freight"/>
-	</field>
-	<field name="Currency" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="Currency"/>
 	</field>
 	<sortField name="ShipCountry"/>
 	<variable name="OrderNumber" class="java.lang.Integer" resetType="Group" resetGroup="ShipCountryGroup" calculation="Count">
@@ -105,7 +102,7 @@
 				<textElement textAlignment="Center">
 					<font size="22"/>
 				</textElement>
-				<text><![CDATA[Country Orders Report]]></text>
+				<text><![CDATA[Orders sorted by currency and country]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -113,7 +110,7 @@
 		<band height="21">
 			<staticText>
 				<reportElement style="Sans_Bold" mode="Opaque" x="0" y="5" width="515" height="15" forecolor="#FFFFFF" backcolor="#333333" uuid="da0f1cad-f552-424b-bf19-b41cabbfa4ac"/>
-				<text><![CDATA[Country Order List]]></text>
+				<text><![CDATA[Currency]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
@@ -132,10 +129,6 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement style="Sans_Normal_8" positionType="Float" x="146" y="2" width="108" height="10" uuid="6a61edb3-239e-4791-a046-a6459343ac07"/>
 				<textFieldExpression><![CDATA[$F{ShipCity}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement style="Sans_Normal_8" positionType="Float" x="146" y="2" width="108" height="10" uuid="6a61edb3-239e-4791-a046-a6459343ac07"/>
-				<textFieldExpression><![CDATA[$F{Currency}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="¤ #,##0.00">
 				<reportElement style="Sans_Normal_8" positionType="Float" x="259" y="2" width="92" height="10" uuid="61a8a117-6a43-46a7-9b96-10c5beb578ab"/>
