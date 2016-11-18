@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2016-11-18T13:55:13 -->
+<!-- 2016-11-18T14:01:48 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="country_orders_report_new" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="bbe115b5-a5a0-4b39-9b73-7092dc59ab6d">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Demo JSON Data Adapter "/>
 	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
@@ -41,10 +41,9 @@
 					<reportElement x="0" y="20" width="515" height="1" isPrintWhenDetailOverflows="true" uuid="6d76c22c-329f-4e77-a886-8580d3cb6bc1"/>
 				</line>
 			</band>
-			<band height="14"/>
 		</groupHeader>
 		<groupFooter>
-			<band height="14"/>
+			<band height="175"/>
 		</groupFooter>
 	</group>
 	<title>
@@ -70,7 +69,13 @@
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="14"/>
+		<band height="200">
+			<subreport>
+				<reportElement x="0" y="0" width="515" height="200" uuid="68fd77e4-5c8a-40a6-87db-e5357053256f"/>
+				<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["reports/orders/by/currency/countries.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 	</detail>
 	<pageFooter>
 		<band height="40">
