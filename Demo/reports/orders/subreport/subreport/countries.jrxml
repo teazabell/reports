@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2016-11-18T18:07:28 -->
+<!-- 2016-11-18T18:11:27 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="countries" pageWidth="515" pageHeight="742" columnWidth="515" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="bbe115b5-a5a0-4b39-9b73-7092dc59ab6d">
 	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 	<style name="Sans_Normal_8" style="Sans_Normal" fontSize="8"/>
@@ -27,12 +27,4 @@
 			<band height="31"/>
 		</groupFooter>
 	</group>
-	<pageHeader>
-		<band height="21">
-			<staticText>
-				<reportElement style="Sans_Bold" mode="Opaque" x="0" y="5" width="515" height="15" forecolor="#FFFFFF" backcolor="#333333" uuid="da0f1cad-f552-424b-bf19-b41cabbfa4ac"/>
-				<text><![CDATA[ShipCountry]]></text>
-			</staticText>
-		</band>
-	</pageHeader>
 </jasperReport>
