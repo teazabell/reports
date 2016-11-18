@@ -98,6 +98,22 @@
       "Currency": "EUR"
     },
     {
+      "ShipPostalCode": 87110,
+      "OrderDate": "1998-05-06",
+      "OrderID": 14,
+      "Freight": 8.53,
+      "ShipRegion": "NM",
+      "RequiredDate": "1998-06-03",
+      "ShipCity": "Washington",
+      "ShipCountry": "USA",
+      "EmployeeID": 1,
+      "ShipVia": 2,
+      "CustomerID": "RATTC",
+      "ShipAddress": "668 Johnson Dr.",
+      "ShipName": "Corvo Arttano",
+      "Currency": "US"
+    },
+    {
       "ShipPostalCode": "05454-876",
       "ShippedDate": "1996-07-12",
       "OrderDate": "1996-07-08",
@@ -121,7 +137,7 @@
       "Freight": 8.53,
       "ShipRegion": "NM",
       "RequiredDate": "1998-06-03",
-      "ShipCity": "Albuquerque",
+      "ShipCity": "New York",
       "ShipCountry": "USA",
       "EmployeeID": 1,
       "ShipVia": 2,
